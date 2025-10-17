@@ -1,0 +1,8 @@
+{
+  "watch": ["server.js", "views"],
+  "ext": "js,ejs",
+  "ignore": ["public/css/*"],
+  "env": {
+    "NODE_ENV": "development"
+  }
+}
