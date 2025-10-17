@@ -6,4 +6,53 @@
   width: 350px;
   z-index: 30;
   overflow: hidden;
+
+  &-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+
+  .main-header-contacts {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 0 40px;
+  }
+
+  .main-header-contacts-wrap {
+    padding-top: 25px;
+    border-top: 1px dashed rgba(255, 255, 255, .2);
+  }
+
+  .main-header-contacts-wrap li {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+
+  .main-header-contacts-wrap li a {
+    color: #fff
+  }
+
+  .main-header-contacts-wrap li span {
+    display: block;
+    color: $brand_yellow;
+    margin-bottom: 4px;
+  }
+
+  .header-social {
+    margin-top: 20px;
+    padding-top: 34px;
+    border-top: 1px dashed rgba(255, 255, 255, .2);
+  }
+
+  .header-social a {
+    color: $brand_yellow;
+    display: inline-block;
+    margin: 0 20px;
+  }
 }

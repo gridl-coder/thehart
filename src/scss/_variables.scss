@@ -9,3 +9,15 @@ $brand_yellow: #cbba57;
 
 // Fonts
 $brand_font:  "Cormorant Garamond", serif;
+
+.btn {
+  background-color: $brand_yellow !important;
+  border-color: $brand_yellow !important;
+  color: $brand_dark !important;
+  font-weight: bold;
+
+  &:hover {
+    background-color: darken($brand_yellow, 15%) !important;
+    color: $brand_dark !important;
+  }
+}

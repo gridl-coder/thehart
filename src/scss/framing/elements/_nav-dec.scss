@@ -1,0 +1,29 @@
+.nav_dec {
+  position: relative;
+  width: 90px;
+  display: inline-block;
+  margin: 0 0 30px 0;
+
+}
+.nav_dec:before, .nav_dec:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  border-top: 1px dotted rgba(255, 255, 255, .2);
+  top: 50%;
+  margin-top: 1px;
+}
+.nav_dec:before {
+  left: 0;
+}
+.nav_dec:after {
+  right: 0;
+}
+.nav_dec span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $brand_yellow;
+  display: inline-block;
+}
