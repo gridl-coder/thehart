@@ -1,0 +1,24 @@
+@use "bootstrap/scss/bootstrap";
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  letter-spacing: 0.08em;
+}
+
+.card-title {
+  letter-spacing: 0.02em;
+}
+
+.card-text {
+  color: #495057;
+}
+
+.btn-primary {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.75rem 2.5rem;
+}
