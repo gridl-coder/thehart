@@ -1,0 +1,43 @@
+{
+  "name": "thehart",
+  "version": "1.0.0",
+  "description": "Front-end wireframe for The White Hart website with EJS, Bootstrap, and live reload.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run watch:scss\" \"npm run watch:images\" \"npm run serve\"",
+    "serve": "nodemon server.js",
+    "build:css": "sass src/scss:public/css --style=compressed --no-source-map --load-path=node_modules",
+    "watch:scss": "sass --watch src/scss:public/css --no-source-map --load-path=node_modules",
+    "build:images": "node scripts/optimize-images.js",
+    "watch:images": "nodemon --watch src/images --ext jpg,jpeg,png,svg,gif,webp,avif,JPG,JPEG,PNG,SVG,GIF,WEBP,AVIF --exec \"node scripts/optimize-images.js\"",
+    "build": "npm run build:css && npm run build:images",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "bootstrap",
+    "scss",
+    "ejs",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "connect-livereload": "^0.6.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "livereload": "^0.10.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "fast-glob": "^3.3.3",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "nodemon": "^3.1.10",
+    "sass": "^1.93.2"
+  }
+}
