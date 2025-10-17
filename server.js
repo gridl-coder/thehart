@@ -57,12 +57,32 @@ app.set('view engine', 'ejs');
 // Static assets
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-  res.render('index', { title: 'The White Hart' });
+app.get('/', (req, res, next) => {
+  const htmlPath = path.join(__dirname, 'public', 'index.html');
+
+  if (!fs.existsSync(htmlPath)) {
+    return res.render('index', { title: 'The White Hart' });
+  }
+
+  res.sendFile(htmlPath, (error) => {
+    if (error) {
+      next(error);
+    }
+  });
 });
 
-app.use((req, res) => {
-  res.status(404).render('404', { title: 'Not Found' });
+app.use((req, res, next) => {
+  const htmlPath = path.join(__dirname, 'public', '404.html');
+
+  if (!fs.existsSync(htmlPath)) {
+    return res.status(404).render('404', { title: 'Not Found' });
+  }
+
+  res.status(404).sendFile(htmlPath, (error) => {
+    if (error) {
+      next(error);
+    }
+  });
 });
 
 app.listen(PORT, () => {
