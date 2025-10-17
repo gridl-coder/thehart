@@ -11,3 +11,4 @@ yarn-error.log*
 
 # Compiled assets can be regenerated
 public/css/*.map
+public/images/

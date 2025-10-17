@@ -10,13 +10,13 @@ npm install
 
 ### Development
 
-Run the development environment with live reloading and SCSS watching:
+Run the development environment with live reloading plus SCSS and image watching:
 
 ```bash
 npm run dev
 ```
 
-The server runs on [http://localhost:3000](http://localhost:3000). Livereload automatically refreshes the browser when you update EJS views, SCSS, or public assets.
+The server runs on [http://localhost:3000](http://localhost:3000). Livereload automatically refreshes the browser when you update EJS views, SCSS, source images, or public assets.
 
 ### Build stylesheets
 
@@ -25,6 +25,16 @@ Compile the SCSS without starting the watcher:
 ```bash
 npm run build:css
 ```
+
+### Optimise images
+
+Optimise images from `src/images` into `public/images`:
+
+```bash
+npm run build:images
+```
+
+The optimisation task runs automatically when `npm run dev` is active.
 
 ### Production
 
@@ -36,8 +46,10 @@ npm start
 
 ```
 ├── public/          # Compiled assets served by Express
-│   └── css/
+│   ├── css/
+│   └── images/
 ├── src/
+│   ├── images/      # Source images for optimisation
 │   └── scss/        # Source SCSS files
 ├── views/           # EJS templates and partials
 ├── server.js        # Express app with live reload
