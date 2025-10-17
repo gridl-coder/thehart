@@ -3,16 +3,7 @@
 const path = require('node:path');
 const fs = require('node:fs');
 const fsp = require('node:fs/promises');
-const imagemin = require('imagemin');
-const imageminMozjpeg = require('imagemin-mozjpeg');
-const imageminPngquant = require('imagemin-pngquant');
-const imageminSvgo = require('imagemin-svgo');
-const imageminGifsicle = require('imagemin-gifsicle');
 const fg = require('fast-glob');
-
-function plugin(module) {
-  return module.default ?? module;
-}
 
 const SRC_DIR = path.resolve(__dirname, '..', 'src', 'images');
 const DEST_DIR = path.resolve(__dirname, '..', 'public', 'images');
@@ -48,7 +39,6 @@ async function optimizeImages() {
   await ensureDirectory(DEST_DIR);
 
   const supportedExtensions = ['jpg', 'jpeg', 'png', 'svg', 'gif'];
-  const runImagemin = imagemin.default ?? imagemin;
 
   const allSourceFiles = await fg('**/*', {
     cwd: SRC_DIR,
@@ -67,14 +57,20 @@ async function optimizeImages() {
 
   if (supportedFiles.length > 0) {
     try {
-      const optimized = await runImagemin(
+      const imagemin = (await import('imagemin')).default;
+      const imageminMozjpeg = (await import('imagemin-mozjpeg')).default;
+      const imageminPngquant = (await import('imagemin-pngquant')).default;
+      const imageminSvgo = (await import('imagemin-svgo')).default;
+      const imageminGifsicle = (await import('imagemin-gifsicle')).default;
+
+      const optimized = await imagemin(
         supportedFiles.map((file) => path.join(SRC_DIR, file)),
         {
           destination: DEST_DIR,
           plugins: [
-            plugin(imageminMozjpeg)({ quality: 80, progressive: true }),
-            plugin(imageminPngquant)({ quality: [0.6, 0.8] }),
-            plugin(imageminSvgo)({
+            imageminMozjpeg({ quality: 80, progressive: true }),
+            imageminPngquant({ quality: [0.6, 0.8] }),
+            imageminSvgo({
               plugins: [
                 {
                   name: 'preset-default',
@@ -86,7 +82,7 @@ async function optimizeImages() {
                 },
               ],
             }),
-            plugin(imageminGifsicle)({ optimizationLevel: 3 }),
+            imageminGifsicle({ optimizationLevel: 3 }),
           ],
         }
       );
@@ -105,9 +101,8 @@ async function optimizeImages() {
     (file) => !optimizedSet.has(file.replace(/\\/g, '/'))
   );
   const copied = await copyUnoptimizedFiles(filesToCopy, DEST_DIR);
-  const finalCopied = copied;
 
-  if (optimizedRelative.length === 0 && finalCopied.length === 0) {
+  if (optimizedRelative.length === 0 && copied.length === 0) {
     console.log('No images were processed.');
     return;
   }
@@ -116,8 +111,8 @@ async function optimizeImages() {
     console.log(`Optimised ${optimizedRelative.length} image${optimizedRelative.length === 1 ? '' : 's'}.`);
   }
 
-  if (finalCopied.length > 0) {
-    console.log(`Copied ${finalCopied.length} asset${finalCopied.length === 1 ? '' : 's'} without optimisation.`);
+  if (copied.length > 0) {
+    console.log(`Copied ${copied.length} asset${copied.length === 1 ? '' : 's'} without optimisation.`);
   }
 }
 
