@@ -1,0 +1,19 @@
+html {
+  overflow-x: hidden !important;
+  height: 100%;
+}
+body {
+  font-family:$brand_font;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background-color: $brand_dark;
+  height: 100%;
+}
+
+@import "partials/head";
+
+@import "partials/main-header";
+
+
+@import "partials/footer";
