@@ -1,13 +1,16 @@
 @use "bootstrap/scss/bootstrap";
 
-body {
-  font-family: "Poppins", "Segoe UI", sans-serif;
-  background-color: #f8f9fa;
-}
+// Site Variables
+@import "variables";
 
-.navbar-brand {
-  letter-spacing: 0.08em;
-}
+// Wire Framing - Responsive scaffolding, mobile first
+@import "framing/base";
+
+// Styling
+@import "styling/base";
+
+
+
 
 .card-title {
   letter-spacing: 0.02em;
