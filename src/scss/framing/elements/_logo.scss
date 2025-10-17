@@ -1,9 +1,20 @@
 .main-logo {
   position: fixed;
-  height: 119px;
-  top: 60px;
-  left: 86px;
-  width: 180px;
+  height: 59px;
+  top: 15px;
+  left: 15px;
+  width: 90px;
   z-index: 31;
+  @media only screen and (min-width: 565px) {
+
+
+    height: 119px;
+    top: 60px;
+    left: 86px;
+    width: 180px;
+  }
+
+
+
 
 }

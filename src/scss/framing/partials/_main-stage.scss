@@ -1,9 +1,15 @@
 .main-stage {
   vertical-align: top;
-  position: absolute;
-  left: 350px;
-  top: 90px;
-  right: 0;
-  bottom: 0;
+  position: relative;
   z-index: 2;
+  padding-top: 120px;
+
+  @media only screen and (min-width: 565px) {
+    left: 350px;
+    top: 90px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
 }

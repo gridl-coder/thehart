@@ -2,11 +2,15 @@
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
   z-index: 30;
   overflow: hidden;
-  @include media-breakpoint-up(md) {
+  width: 100%;
+  height: 90px;
+
+  @media only screen and (min-width: 565px) {
     width: 350px;
+    bottom: 0;
+    height: 100%;
   }
 
   &-container {
@@ -29,6 +33,10 @@
   .main-header-contacts-wrap {
     padding-top: 25px;
     border-top: 1px dashed rgba(255, 255, 255, .2);
+    display: none;
+    @media only screen and (min-width: 565px) {
+      display: block;
+    }
   }
 
   .main-header-contacts-wrap li {
@@ -47,9 +55,19 @@
   }
 
   .header-social {
-    margin-top: 20px;
-    padding-top: 34px;
     border-top: 1px dashed rgba(255, 255, 255, .2);
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding-top: 20px;
+    @media only screen and (min-width: 565px) {
+      margin-top: 20px;
+      padding-top: 34px;
+      position: relative;
+      bottom: 0;
+    }
+
   }
 
   .header-social a {

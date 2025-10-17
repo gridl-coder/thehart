@@ -8,7 +8,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  background-color: rgba(9,9,4,0.9);
+  background-color: rgba(9, 9, 4, 0.9);
   background-image: url("../images/photo-white-hart-inn-bodmin-29.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,6 +18,10 @@ body {
   text-align: center;
   font-size: 13px;
   color: white;
+  padding-top: 90px;
+  @media only screen and (min-width: 565px) {
+    padding-top: 0;
+  }
 }
 
 li, ul {
