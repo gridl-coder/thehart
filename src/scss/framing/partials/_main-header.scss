@@ -3,9 +3,11 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 350px;
   z-index: 30;
   overflow: hidden;
+  @include media-breakpoint-up(md) {
+    width: 350px;
+  }
 
   &-container {
     position: absolute;

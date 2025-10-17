@@ -5,6 +5,75 @@
   margin-top: 190px;
   z-index: 5;
 }
+.nav-button-wrap {
+  float:right;
+  height:60px;
+  width:60px;
+  cursor:pointer;
+  position:relative;
+  display: block;
+  margin :6px 5px 0 0;
+  z-index: 20;
+}
+.nav-button  {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:22px;
+  height:20px;
+  margin-left:-11px;
+  margin-top:-6px;
+}
+.nav-button span{
+  float:left;
+  width:100%;
+  height:2px;
+  background: #fff;
+  margin-bottom:4px;
+  transition: all .3s ease-in-out;
+}
+.nav-button span:first-child {
+  width: 50%;
+}
+.nav-button-wrap.nbw_tb span {
+  width: 0;
+}
+.nav-button-wrap:before {
+  font-family: "Font Awesome 6 Pro";
+  content: "\f00d";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 80px;
+  line-height: 80px;
+  opacity: 0;
+  color:  var(--main-color);
+  font-size: 19px;
+  transition: all .3s ease-in-out;
+}
+.nav-button-wrap.nbw_tb:before {
+  transition-delay: .3s;
+  opacity: 1;
+}
+@media only screen and (max-width: 564px) {
+  .nav-button-wrap {
+    margin-right: 15px;
+    margin-left: 4px;
+    width: 30px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 20px;
+    margin-left: -11px;
+    margin-top: -6px;
+  }
+}
 
 .main-nav {
 
