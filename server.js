@@ -1,10 +1,39 @@
 const path = require('path');
+const fs = require('fs');
 const express = require('express');
 const livereload = require('livereload');
 const connectLivereload = require('connect-livereload');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
+
+const CRITICAL_CSS_PATH = path.join(__dirname, 'public', 'css', 'critical.css');
+let criticalCss = '';
+
+const loadCriticalCss = () => {
+  try {
+    criticalCss = fs.readFileSync(CRITICAL_CSS_PATH, 'utf8');
+  } catch (error) {
+    criticalCss = '';
+  }
+};
+
+loadCriticalCss();
+
+try {
+  fs.watch(path.dirname(CRITICAL_CSS_PATH), (eventType, filename) => {
+    if (filename === path.basename(CRITICAL_CSS_PATH)) {
+      loadCriticalCss();
+    }
+  });
+} catch (error) {
+  // Directory might not exist during development builds.
+}
+
+app.use((req, res, next) => {
+  res.locals.criticalCss = criticalCss;
+  next();
+});
 
 // Live reload setup
 const liveReloadServer = livereload.createServer({
