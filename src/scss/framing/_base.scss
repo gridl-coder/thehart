@@ -1,9 +1,54 @@
+html {
+  overflow-x: hidden !important;
+  height: 100%;
+  min-height: 100%;
+}
+
+
+body {
+  font-family: $brand_font;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: darken($brand-dark,10%);
+  min-height: 100%;
+  text-align: center;
+  color: white;
+  //margin-top: 90px;
+  @media only screen and (min-width: 565px) {
+    padding-top: 0;
+  }
+}
+
+li, ul {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  color: #000;
+}
+
+
 // Partials
+@import "partials/main-nav";
 @import "partials/main-header";
 @import "partials/main-stage";
+@import "partials/stage-intro";
+@import "partials/stage-menu";
 @import "partials/footer";
-@import "partials/main-nav";
+
 
 // Elements
 @import "elements/logo";
 @import "elements/nav-dec";
+@import "elements/brush-dec";
+@import "elements/boxed-container";

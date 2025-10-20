@@ -1,0 +1,109 @@
+.stage-intro {
+
+  &-header {
+    position: relative;
+    padding-top: 20%;
+    margin-bottom: 60px;
+
+
+    h1 {
+      letter-spacing: 4px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      font-size: 3.5rem;
+      line-height: 1.4;
+      text-transform: uppercase;
+
+      span {
+        font-size: 1.5rem !important;
+      }
+
+    }
+
+    &-image {
+      position: absolute;
+      top: -250px;
+      right: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    &-inner {
+      margin: 0 auto;
+      max-width: 620px;
+      position: relative;
+      z-index: 101;
+      border-radius: 10px;
+      background: rgba(9,9,4,0.9);
+      border: 1px dashed rgba(255, 255, 255, 0.5);
+      padding: 15px;
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+
+  &-pods {
+
+    padding: 0 5% 60px 5%;
+
+    .inner {
+
+    }
+
+    .icon {
+      color: $brand_yellow;
+      background: $brand_dark;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      line-height: 120px;
+      margin-bottom: 5px;
+      width: 100px;
+      height: 100px;
+      @media only screen and (min-width: 565px) {
+        line-height: 210px;
+        margin-bottom: 15px;
+        width: 160px;
+        height: 160px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 100px;
+        //background: #090904;
+        z-index: 1;
+        border: 1px dashed rgba(255, 255, 255, 0.5);
+      }
+
+      i {
+        font-size: 40px;
+        @media only screen and (min-width: 565px) {
+          font-size: 80px;
+        }
+      }
+    }
+
+    h3 {
+      font-weight: bolder;
+      font-size: 22px;
+      margin-bottom: 30px;
+      @media only screen and (min-width: 565px) {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+}

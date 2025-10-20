@@ -1,10 +1,10 @@
 .nav_dec {
   position: relative;
   width: 90px;
-  margin: 0 0 30px 0;
-  display: none;
+  margin: 0 0 15px 0;
+  display: inline-block;
+  //display: none;
   @media only screen and (min-width: 565px) {
-    display: inline-block;
     margin: 0 0 15px 0;
   }
 }

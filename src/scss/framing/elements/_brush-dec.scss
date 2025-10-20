@@ -1,0 +1,22 @@
+.brush-dec , .brush-dec2 {
+  //position:absolute;
+  height:40px;
+  width:100%;
+  z-index:20;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: repeat;
+  background-origin: content-box;
+}
+.brush-dec {
+  background:url(../images/brush-dec.png);
+}
+.brush-dec2 {
+  height:40px;
+  background:url(../images/brush-dec_2.png);
+  position: relative;
+  top: -2px;
+}
+.brush-dec2.brush-dec_bottom {
+}
