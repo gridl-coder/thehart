@@ -2,30 +2,41 @@
 
   &-header {
     position: relative;
-    padding-top: 20%;
-    margin-bottom: 60px;
+    padding: 260px 10px 0 10px;
+    margin-bottom: 30px;
 
+    @include media-breakpoint-up(md) {
+      padding: 20% 0 0 0;
+      margin-bottom: 60px;
+
+    }
 
     h1 {
       letter-spacing: 4px;
       font-weight: 500;
-      margin-bottom: 1rem;
-      font-size: 3.5rem;
-      line-height: 1.4;
       text-transform: uppercase;
 
-      span {
-        font-size: 1.5rem !important;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 1rem;
+        font-size: 3.5rem;
+        line-height: 1.4;
       }
 
+      span {
+        font-size: 1.3rem;
+      }
     }
 
     &-image {
       position: absolute;
-      top: -250px;
+      top: 60px;
       right: 0;
       left: 0;
       width: 100%;
+      @include media-breakpoint-up(md) {
+        top: -250px;
+
+      }
     }
 
     &-inner {
@@ -34,12 +45,12 @@
       position: relative;
       z-index: 101;
       border-radius: 10px;
-      background: rgba(9,9,4,0.9);
+      background: rgba(9, 9, 4, 0.9);
       border: 1px dashed rgba(255, 255, 255, 0.5);
       padding: 15px;
 
       p {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
     }
   }
@@ -63,7 +74,7 @@
       margin-bottom: 5px;
       width: 100px;
       height: 100px;
-      @media only screen and (min-width: 565px) {
+      @include media-breakpoint-up(md) {
         line-height: 210px;
         margin-bottom: 15px;
         width: 160px;
@@ -85,7 +96,7 @@
 
       i {
         font-size: 40px;
-        @media only screen and (min-width: 565px) {
+        @include media-breakpoint-up(md) {
           font-size: 80px;
         }
       }
@@ -95,7 +106,7 @@
       font-weight: bolder;
       font-size: 22px;
       margin-bottom: 30px;
-      @media only screen and (min-width: 565px) {
+      @include media-breakpoint-up(md) {
         font-size: 28px;
         margin-bottom: 15px;
       }

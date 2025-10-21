@@ -1,8 +1,32 @@
-.stage-menu {
+.food-banner {
   background: white;
-  padding: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: $brand_dark;
+  .nav_dec {
+    margin: 15px 0;
+  }
+  .nav_dec:before, .nav_dec:after {
+    border-top: 1px dotted rgba(0, 0, 0, 0.2);
+  }
+  p {
+    font-size: 1.256em;
+  }
+}
+
+.stage-menu {
+  padding: 15px;
   color: $brand-dark;
-  font-size: 1.25rem;
+ // font-size: 1.25rem;
+  background: white;
+
+  @include media-breakpoint-up(md) {
+    padding: 60px;
+  }
+
+  .boxed-content-item {
+    background: white url("../images/hart-bg.png") no-repeat right bottom;
+  }
 
   .nav_dec:before, .nav_dec:after {
     border-top: 1px dotted rgba(0, 0, 0, 0.2);
@@ -11,28 +35,34 @@
   h1 {
     font-size: 2.0em;
     font-weight: bold;
-  }
 
-  .subtitle {
-    color: $brand-yellow;
-    font-style: italic;
-    font-size: 18px;
-    font-weight: 600;
-    padding-bottom: 10px;
-    position: relative;
-    display: block;
-    letter-spacing: 0.1em;
+
+    .subtitle {
+      color: $brand-yellow;
+      font-style: italic;
+      font-size: 18px;
+      font-weight: 600;
+      padding-bottom: 10px;
+      position: relative;
+      display: block;
+      letter-spacing: 0.1em;
+    }
   }
 
   .menu-section {
     text-align: left;
-    margin-bottom: 60px;
-    padding-right: 15px;
+    margin-bottom: 30px;
+    @include media-breakpoint-up(md) {
+      padding-bottom: 60px;
+      padding-right: 15px;
+    }
+
     &--right {
       //text-align: right;
-      padding-right: 0px;
-      padding-left: 15px;
-
+      @include media-breakpoint-up(md) {
+        padding-right: 0px;
+        padding-left: 15px;
+      }
     }
 
     h3 {
@@ -47,7 +77,6 @@
       span {
         float: right;
       }
-
     }
   }
 }

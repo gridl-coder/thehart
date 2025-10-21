@@ -1,15 +1,21 @@
 .boxed-container {
   position: relative;
   border-radius: 4px;
-  padding: 30px;
+  padding: 15px;
   background: #F6F6F6;
   border: 1px dashed #ddd;
+  @include media-breakpoint-up(md) {
+    padding: 30px;
+  }
 }
 
 .boxed-content-item {
   border-radius: 10px;
   border: 1px dashed #ddd;
-  padding: 30px;
+  padding: 15px;
   background: #fff;
   position: relative;
+  @include media-breakpoint-up(md) {
+    padding: 30px;
+  }
 }

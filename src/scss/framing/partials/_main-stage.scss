@@ -1,6 +1,6 @@
 .main-stage {
   /* beasties:include */
-  @media only screen and (min-width: 565px) {
+  @include media-breakpoint-up(md) {
     left: 350px;
     top: 0;
     position: absolute;
