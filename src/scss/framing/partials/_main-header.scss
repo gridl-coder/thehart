@@ -3,7 +3,6 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  overflow: hidden;
   width: 100%;
   height: 90px;
   background: $brand_dark;
@@ -30,6 +29,7 @@
     width: 350px;
     bottom: 0;
     height: 100%;
+    overflow: hidden;
     .nav_dec {
       display: inline-block;
     }

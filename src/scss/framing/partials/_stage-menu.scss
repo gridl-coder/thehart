@@ -3,21 +3,24 @@
   padding-top: 30px;
   padding-bottom: 30px;
   color: $brand_dark;
+
   .nav_dec {
     margin: 15px 0;
   }
+
   .nav_dec:before, .nav_dec:after {
     border-top: 1px dotted rgba(0, 0, 0, 0.2);
   }
+
   p {
-    font-size: 1.256em;
+    font-size: 1.156em;
   }
 }
 
 .stage-menu {
   padding: 15px;
   color: $brand-dark;
- // font-size: 1.25rem;
+  // font-size: 1.25rem;
   background: white;
 
   @include media-breakpoint-up(md) {
@@ -25,7 +28,11 @@
   }
 
   .boxed-content-item {
-    background: white url("../images/hart-bg.png") no-repeat right bottom;
+    background: white url("../images/hart-bg.png") no-repeat -50% 97%;
+
+    @include media-breakpoint-up(md) {
+      background: white url("../images/hart-bg.png") no-repeat right bottom;
+    }
   }
 
   .nav_dec:before, .nav_dec:after {
@@ -33,10 +40,6 @@
   }
 
   h1 {
-    font-size: 2.0em;
-    font-weight: bold;
-
-
     .subtitle {
       color: $brand-yellow;
       font-style: italic;

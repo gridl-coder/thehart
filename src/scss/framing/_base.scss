@@ -13,7 +13,7 @@ body {
   min-height: 100%;
   text-align: center;
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   //margin-top: 90px;
   @media only screen and (min-width: 565px) {
     padding-top: 0;
@@ -50,6 +50,7 @@ a {
 @import "partials/stage-intro";
 @import "partials/stage-events";
 @import "partials/stage-menu";
+@import "partials/stage-contact";
 @import "partials/footer";
 
 
@@ -58,3 +59,5 @@ a {
 @import "elements/nav-dec";
 @import "elements/brush-dec";
 @import "elements/boxed-container";
+@import "elements/section-separator";
+@import "elements/map";

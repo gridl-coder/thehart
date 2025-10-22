@@ -1,41 +1,8 @@
+<br id="menu"/>
+
 <div class="brush-dec"></div>
 
-<section class="food-banner">
-    <div class="container" style="max-width: 1090px;">
-        <div class="row">
-            <div class="col-md-5 food-banner-image text-center">
-                <img src="images/small-breakfast.jpg" class="img-fluid" alt="">
-                <div class="nav_dec"><span></span></div>
-                <img src="images/large-breakfast.jpg" class="img-fluid" alt="">
-                <div class="nav_dec"><span></span></div>
-
-
-            </div>
-            <div class="col-md-7 food-banner-content">
-
-                <div class="boxed-container">
-
-                    <div class="boxed-content-item text-start">
-                        <h1>Food Service Times</h1>
-                        <p><strong>Main Menu</strong> - Mon/Tue/Thur/Fri/Sat | 10:00 - 16:00</p>
-                        <p><strong>Sunday Lunch</strong> - Sundays | 12:00 - 13:00</p>
-                        <p><strong>Guest Food Evening</strong> - Wednesdays | 17:00 - 20:00 </p>
-                    </div>
-
-
-                </div>
-                <div class="nav_dec"><span></span></div>
-
-                <img src="images/pop-up-food.jpg" class="img-fluid" alt="">
-                <div class="nav_dec"><span></span></div>
-
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="menu" class="stage-menu">
+<section class="stage-menu">
 
     <div class="boxed-container">
 
@@ -46,9 +13,11 @@
                 Main Menu
             </h1>
 
-            <p class="lead">
-                <strong>Our Main Menu is served Mon/Tue/Thur/Fri/Sat, from 10am 'till 3pm.</strong><br/>
-                <em>Takeaway Available.</em>
+            <%- include('../elements/section-separator') %>
+
+            <p>
+                Our Main Menu is served <strong>Mon/Tue/Thur/Fri/Sat: 10:00 - 15:00</strong><br/>
+                <em>Takeaway Service Available.</em>
             </p>
             <div class="nav_dec"><span></span></div>
 
@@ -99,13 +68,12 @@
 
                         <div class="menu-section menu-section--left">
                             <h3>Snack Boxes with Chips</h3>
-                            <p><small>Served with Side Salad & Tortilla Chips.</small></p>
                             <div class="menu-item">
                                 <h4>Chicken Strips <span class="price">£4.95</span></h4>
                                 <h4>Cod Bites <span class="price">£4.95</span></h4>
                                 <h4>Popcorn Chicken <span class="price">£4.95</span></h4>
-                                <h4>Chicken Wings <small>- BBQ/Sweet Chilli</small> <span class="price">£4.95</span>
-                                </h4>
+                                <h4>BBQ Chicken Wings <span class="price">£4.95</span></h4>
+                                <h4>Sweet Chilli Chicken Wings <span class="price">£4.95</span></h4>
 
                             </div>
                         </div>
@@ -124,8 +92,9 @@
 
                             <div class="menu-item">
                                 <h4>4oz Cheese Burger <span class="price">£9.95</span></h4>
-                                <p>A 4oz Beef Burger topped with Cheese.<br/><small>Add Bacon - £1 | Double Up -
-                                        £1.50</small></p>
+                                <p>A 4oz Beef Burger topped with Cheese.<br/>
+                                    <small><strong>Add Bacon - £1 | Double Up - £1.50</strong></small>
+                                </p>
                             </div>
 
                             <div class="menu-item">
@@ -161,6 +130,43 @@
 
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="food-banner">
+    <div class="container" style="max-width: 1090px;">
+        <div class="row">
+            <div class="col-md-5 food-banner-image text-center">
+
+                <img src="images/large-breakfast.jpg" class="img-fluid" alt="">
+                <div class="nav_dec"><span></span></div>
+
+                <a href="images/pop-up-food.jpg" target="_blank"><img src="images/pop-up-food.jpg" class="img-fluid"
+                                                                      alt="Pop Up food Nights at The White Hart"></a>
+                <div class="nav_dec"><span></span></div>
+                <img src="images/new-ales.jpg" class="img-fluid" alt="">
+                <div class="nav_dec"><span></span></div>
+            </div>
+            <div class="col-md-7 food-banner-content">
+
+                <div class="boxed-container">
+
+                    <div class="boxed-content-item text-start">
+                        <h1>Food Service Times</h1>
+                        <p><strong>Main Menu</strong><br/>Mon/Tue/Thur/Fri/Sat | 10:00 - 16:00</p>
+                        <p><strong>Sunday Lunch</strong><br/>Sundays | 12:00 - 15:00</p>
+                        <p><strong>Guest Food Evening</strong><br/>Wednesdays | 17:00 - 20:00 </p>
+                    </div>
+
+
+                </div>
+                <div class="nav_dec"><span></span></div>
+                <a href="images/hart-main-1.png" target="_blank"><img src="images/hart-main-1.png" class="img-fluid"
+                                                                      alt="Main Food Menu at The White Hart"></a>
+                <div class="nav_dec"><span></span></div>
+
+
             </div>
         </div>
     </div>

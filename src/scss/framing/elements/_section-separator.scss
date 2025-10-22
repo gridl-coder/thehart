@@ -1,0 +1,36 @@
+.section-separator {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  svg {
+    path {
+      fill: $brand-yellow;
+    }
+  }
+}
+
+.section-separator:before, .section-separator:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 110px;
+  height: 1px;
+  background: #eee;
+}
+
+.section-separator:before {
+  left: 50%;
+  margin-left: 30px;
+}
+
+.section-separator:after {
+  right: 50%;
+  margin-right: 30px;
+}
+
+.section-separator i {
+  font-size: 1.7em;
+  color: var(--main-color);
+  transform: rotate(-45deg);
+}

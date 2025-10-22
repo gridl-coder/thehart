@@ -1,0 +1,59 @@
+.stage-contact {
+
+  padding: 15px;
+  color: $brand-dark;
+  // font-size: 1.25rem;
+  background: white;
+
+  @include media-breakpoint-up(md) {
+    padding: 60px;
+  }
+/*
+  .boxed-content-item {
+    background: white url("../images/hart-bg.png") no-repeat -50% 97%;
+
+    @include media-breakpoint-up(md) {
+      background: white url("../images/hart-bg.png") no-repeat right bottom;
+    }
+  }
+*/
+  .nav_dec:before, .nav_dec:after {
+    border-top: 1px dotted rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    .subtitle {
+      color: $brand-yellow;
+      font-style: italic;
+      font-size: 18px;
+      font-weight: 600;
+      padding-bottom: 10px;
+      position: relative;
+      display: block;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  i {
+    font-size: 3.4em;
+    color: $brand-yellow;
+    margin-bottom: 10px;
+  }
+
+  span {
+    display: block;
+  }
+  a {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 60px;
+    display: block;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+    }
+  .section-separator {
+    margin-bottom: 30px;
+  }
+}
+
